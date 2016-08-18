@@ -10,6 +10,8 @@ env:
   - EATS=TASTY_PIES
   - EAT_PIES_SLOWLY=2
 
+runner_image: drydock-prod.workiva.org/workiva/smithy-runner-java:66194
+
 script:
   - nosetests
   - python setup.py sdist
