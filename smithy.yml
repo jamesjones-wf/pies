@@ -14,6 +14,7 @@ env:
   - EAT_PIES_SLOWLY=2
 
 script:
+  - sleep 1000000
   - npm i
   - nosetests
   - python setup.py sdist
