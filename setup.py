@@ -3,7 +3,12 @@ from setuptools import find_packages, setup
 from pip.req import parse_requirements
 
 def get_requirements(filename):
-    reqs = parse_requirements(filename)
+    try:
+        from pip.download import PipSession
+        session = PipSession()
+    except ImportError:
+        session = None
+    reqs = parse_requirements(filename, session=session)
     return [str(r.req) for r in reqs]
 
 def get_install_requires():
