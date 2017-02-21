@@ -6,7 +6,7 @@ requirements:
   - requirements_dev.txt
 
 
-runner_image: drydock-prod.workiva.org/workiva/smithy-runner-java:66194
+runner_image: drydock-prod.workiva.org/workiva/smithy-runner:127137
 
 env:
   - LIKES=PIES
